@@ -1,0 +1,109 @@
+
+nav > .nav.nav-tabs{
+
+    border: none;
+      color:#fff;
+      background:#00a1e4;
+      border-radius:0;
+      width: 100%;
+  
+  }
+  nav > div a.nav-item.nav-link,
+  nav > div a.nav-item.nav-link.active
+  {
+    border: none;
+      padding:5px;
+      color:#fff;
+      background:#00a1e4;
+      border-radius:0;
+      // border-right: 1px solid white;
+  }
+  nav .nav-tabs a{
+    position: relative;
+    font-size: 12px;
+    color:white;
+    background: #00a1e4;
+  }
+
+  nav .nav-tabs a:after{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    // border-top: 15px solid transparent;
+    // border-bottom: 17px solid transparent;
+    // border-left: 10px solid #00a1e4;
+    background: #00a1e4;
+    position: absolute;
+    top: 3px;
+    right: -10px;
+    z-index: 1;
+    transform: rotate(45deg);
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  }
+
+
+
+  nav .nav-tabs a:last-child:after{
+    content: "";
+    display: none;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 17px solid transparent;
+    border-left: 10px solid #00a1e4;
+    position: absolute;
+    top: -2px;
+    right: -10px;
+    z-index: 1;
+  }
+  
+  nav > div a.nav-item.nav-link.active:after
+   {    
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #111188;
+    position: absolute;
+    top: 3px;
+    right: -10px;
+    z-index: 1;
+    transform: rotate(45deg);
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  }
+
+    
+  nav > div a.nav-item.nav-link.active:last-child:after
+   {  
+    display: none;
+    
+  }
+
+  nav > div a.nav-item.nav-link.active
+   {    
+    background: #111188;
+  }
+
+  .tab-content{
+    width: 100%;
+  }
+
+ 
+  
+  nav > div a.nav-item.nav-link:hover,
+  nav > div a.nav-item.nav-link:focus
+  {
+    border: none;
+    background: #111188;
+      color:#fff;
+      border-radius:0;
+      transition:background 0.20s linear;
+  }
+  
+  nav .nav-tabs a:hover,
+  nav .nav-tabs a:hover:after{    
+    background: #111188;    
+  }

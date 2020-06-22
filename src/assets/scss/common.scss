@@ -1,0 +1,105 @@
+body{ 
+  display:flex; 
+  flex-direction:column; 
+}
+
+html, body{ height:100%; margin:0; }
+
+body {
+  font-family: 'Open Sans', sans-serif !important;
+  color: #333333;
+  background: #f6f6f6 !important;
+}
+.page-header {
+  font-size: 36px;
+  color:#444346;
+  font-size: 600;
+}
+
+.content {
+  min-height: calc(100vh - 170px);
+ height: 100%;
+ position: relative;
+}
+
+/*--------------------------------------------------------------
+# Table
+--------------------------------------------------------------*/
+.table-area {
+  font-size: 12px;
+}
+
+.table-area .table thead th {
+  color: #000000;
+  border-top: 1px solid #19bd9d;
+  border-bottom: 1px solid #19bd9d;
+  /* min-width:150px; */
+}
+.table-area .table thead th:last-child {
+ min-width: 75px;
+}
+
+.table-area .table thead td {  
+  min-width:100px;
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.table-area .table-striped tbody tr:nth-of-type(odd) {
+  background-color: #eff4f3;
+}
+
+.table-area .table-striped tbody tr:nth-of-type(even) {
+  background-color: #ffffff;
+}
+
+/*--------------------------------------------------------------
+# Breadscrumb
+--------------------------------------------------------------*/
+
+.breadcrumb {
+  background: transparent !important;
+  font-size: 14px;
+}
+
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+.form-container {
+  background: white;
+   font-size: 12px;
+   width: 100%;
+   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ }
+ 
+ .form-container h1{
+   color: #00a1e4;
+    font-size: 16px;
+    font-weight: 700;
+  }
+ .form-container .form-control {
+   border:none;
+   border-bottom: 1px solid #ced4da;
+   font-size: 12px;
+ }
+
+ .attach-btn {
+  position: relative;
+  overflow: hidden;  
+  .btn-secondary { 
+    font-size: 12px;
+    padding: 2px 10px;
+}
+  input {
+    position: absolute;
+    
+    opacity: 0;
+    right: 0;
+    top: 0;
+  }
+}
+
+ 

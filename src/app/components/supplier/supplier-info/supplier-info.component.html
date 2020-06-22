@@ -1,0 +1,63 @@
+<div class="container-fluid">
+  <div class="container">
+
+    <!-- -----------------------breadcrumb ------------------------ -->
+    <div class="d-flex">
+      <nav aria-label="breadcrumb ">
+        <ol class="breadcrumb pl-0">
+          <li class="breadcrumb-item"><a href="#">Manage</a></li>
+          <li class="breadcrumb-item"><a href="#">Supplier Registration</a></li>
+        </ol>
+      </nav>
+    </div>
+    <!-- -----------------------button ------------------------ -->
+    <div class="d-flex mb-3">
+      <button type="button" class="btn btn-primary">+ click to Add more Scope</button>
+    </div>
+
+    <!-- -----------------------table ------------------------ -->
+    <div class="d-flex table-area">
+      <div class="table-responsive">
+
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">S.No</th>
+              <th scope="col">Application Ref#</th>
+              <th scope="col">Scope of Work</th>
+              <th scope="col">Sub Category</th>
+              <th scope="col">Child Category</th>
+              <th scope="col">Submited Date</th>
+              <th scope="col">Status</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let supplierinfo of suppliers">
+              <th scope="row">{{ supplierinfo.id }}</th>
+              <td> {{ supplierinfo.applicationno }}</td>
+              <td>{{ supplierinfo.scopeofwork }}</td>
+              <td>{{ supplierinfo.subcategory }}</td>
+              <td>{{ supplierinfo.childcategory}}</td>
+              <td>{{ supplierinfo.submiteddate}}</td>
+              <td>{{ supplierinfo.status}}</td>
+              <td><a routerLink="/supplier-info-edit"><i class="fa fa-eye" aria-hidden="true"></i> / <i class="fa fa-pencil-square-o"
+                  aria-hidden="true"></i></a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="d-flex justify-content-between p-2">
+          <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize">
+          </ngb-pagination>
+          <!-- 
+        <select class="custom-select" style="width: auto" [(ngModel)]="pageSize">
+          <option [ngValue]="2">2 items per page</option>
+          <option [ngValue]="4">4 items per page</option>
+          <option [ngValue]="6">6 items per page</option>
+        </select> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

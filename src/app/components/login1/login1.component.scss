@@ -1,0 +1,128 @@
+@import "../../../assets/scss/variables.scss";
+
+  .fixed-container {
+    width: 100%;  
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url('../../../assets/img/bg/login-bg.jpg');
+    background-size:cover;
+    background-position: top;
+  }
+
+  .blur {
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: absolute;
+    top:0  ;
+    opacity: .5;
+  }
+  
+  .container-login100 {
+    width: 100%;  
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;    
+    background-position: top;    
+  }
+  
+  
+  .wrap-login100 {
+    width: 400px;
+    background: #fff;   
+    overflow: hidden;
+    position: relative;
+    border: 2px solid $blue;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    // margin-right: 200px;
+    justify-content: flex-end;
+  }
+  
+  
+
+  .login100-form {
+    position: relative;
+    z-index: 1;    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 30px;
+   
+    &_logo{
+        width: 175px;
+       margin: 20px 0;
+    }
+    &_title {
+      font-size: $ft-size8 * 3;
+      }
+    input {
+      font-size: $ft-size7 * 2;
+      width: 100%;
+      &:focus{
+        border-bottom: 2px solid #d12926;
+      }
+    }
+    .wrap-input100 {
+      width: 100%;
+      position: relative;
+    }
+    .label-text {   
+      font-size: 13px;
+      color: #999999;
+      line-height: 1.4;    
+      display: block;
+      position: relative;
+    }
+    .container-login100-form-btn {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .login100-form-btn {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding:5px 20px;
+      background-color: #4477dd;
+      font-size: 14px;
+      color: #fff;
+      line-height: 1.2;
+      transition: all 0.4s;
+      border: none;
+    }
+    
+    .login100-form-btn:hover {
+      background-color: #0dacdc;
+      border: none;
+    }
+  }
+  @media (max-width: 768px) {
+    .container-login100 {
+     
+      justify-content: center;
+      align-items: center;
+  }
+  }
+  
+  
+  
+  input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], textarea {
+    border-style: solid;
+    border-color: #000;
+    border-color: #1565C0;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 2px;
+    border-radius: 0px;
+    padding: 6px 0px;
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.4);
+    outline: none;
+    height: 36px;
+}
