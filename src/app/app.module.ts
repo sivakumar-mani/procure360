@@ -12,15 +12,19 @@ import { LayoutComponent } from './components/layout/layout.component';
 
 import { SupplierInfoComponent } from './components/supplier/supplier-info/supplier-info.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { SupplierInfoEditComponent } from './components/supplier/supplier-info-edit/supplier-info-edit.component';
-import { SupplierInformationComponent } from './components/supplier/supplier-edit-tabs/supplier-information/supplier-information.component';
-import { SupplierAddressDetailsComponent } from './components/supplier/supplier-edit-tabs/supplier-address-details/supplier-address-details.component';
-import { SupplierContactDetailsComponent } from './components/supplier/supplier-edit-tabs/supplier-contact-details/supplier-contact-details.component';
-import { SupplierFinancialBusinessComponent } from './components/supplier/supplier-edit-tabs/supplier-financial-business/supplier-financial-business.component';
-import { SupplierBankDetailsComponent } from './components/supplier/supplier-edit-tabs/supplier-bank-details/supplier-bank-details.component';
-import { SupplierCategoryScopeComponent } from './components/supplier/supplier-edit-tabs/supplier-category-scope/supplier-category-scope.component';
-import { AttachmentDetailsComponent } from './components/supplier/supplier-edit-tabs/attachment-details/attachment-details.component';
-import { FinalViewComponent } from './components/supplier/supplier-edit-tabs/final-view/final-view.component';
+
+import { SupplierInformationComponent } from './components/supplier/supplier-information/supplier-information.component';
+import { SupplierAddressDetailsComponent } from './components/supplier//supplier-address-details/supplier-address-details.component';
+import { SupplierContactDetailsComponent } from './components/supplier//supplier-contact-details/supplier-contact-details.component';
+import { SupplierFinancialBusinessComponent } from './components/supplier//supplier-financial-business/supplier-financial-business.component';
+import { SupplierBankDetailsComponent } from './components/supplier//supplier-bank-details/supplier-bank-details.component';
+import { SupplierCategoryScopeComponent } from './components/supplier//supplier-category-scope/supplier-category-scope.component';
+import { AttachmentDetailsComponent } from './components/supplier//attachment-details/attachment-details.component';
+import { FinalViewComponent } from './components/supplier//final-view/final-view.component';
+import { DashboardTendersComponent } from './components/dashboard-tenders/dashboard-tenders.component';
+import { DashboardContactsComponent } from './components/dashboard-contacts/dashboard-contacts.component';
+import { ProgressBarComponent } from './components/supplier/progress-bar/progress-bar.component';
+
 
 
 @NgModule({
@@ -33,7 +37,6 @@ import { FinalViewComponent } from './components/supplier/supplier-edit-tabs/fin
     DashboardComponent,
     LayoutComponent,
     SupplierInfoComponent,
-    SupplierInfoEditComponent,
     SupplierInformationComponent,
     SupplierAddressDetailsComponent,
     SupplierContactDetailsComponent,
@@ -41,7 +44,10 @@ import { FinalViewComponent } from './components/supplier/supplier-edit-tabs/fin
     SupplierBankDetailsComponent,
     SupplierCategoryScopeComponent,
     AttachmentDetailsComponent,
-    FinalViewComponent
+    FinalViewComponent,
+    DashboardTendersComponent,
+    DashboardContactsComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,

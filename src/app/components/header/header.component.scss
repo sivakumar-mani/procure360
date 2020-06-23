@@ -32,9 +32,9 @@
   }
   
   #header .logo h1 {
-    font-size: 22px;
+    font-size: 12px;
     padding: 8px 0 0 8px;
-    margin-top: 5px;
+    margin-top: 8px;
     border-left: 1px solid #c2c2c2;
   }
   
@@ -49,6 +49,9 @@
     max-height: 40px;
   }
   
+  #header .navbar {    
+    padding: 0 !important;
+}
   
   
   /*--------------------------------------------------------------
@@ -272,4 +275,6 @@
     color: #fff;
   }
   
-  
+  .nav-link {
+    font-size: 14px;
+  }
