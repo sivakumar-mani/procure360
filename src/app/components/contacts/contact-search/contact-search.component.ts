@@ -3,24 +3,24 @@ import {DecimalPipe} from '@angular/common';
 import {Component, QueryList, ViewChildren} from '@angular/core';
 import {Observable} from 'rxjs';
 
-import {Country} from '../../../country';
-import {CountryService} from '../../../country.service';
-import {NgbdSortableHeader, SortEvent} from '../../../sortable.directive';
+import {Contact} from '../../../data/contact';
+import {ContactService} from '../../../services/contact.service';
+import {NgbdSortableHeader, SortEvent} from '../../../services/sortable.directive';
 
 @Component({
   selector: 'app-contact-search',
   templateUrl: './contact-search.component.html',
   styleUrls: ['./contact-search.component.scss'],
-  providers: [CountryService, DecimalPipe]
+  providers: [ContactService, DecimalPipe]
 })
 export class ContactSearchComponent implements OnInit {
 
-  countries$: Observable<Country[]>;
+  countries$: Observable<Contact[]>;
   total$: Observable<number>;
 
   @ViewChildren(NgbdSortableHeader) headers: QueryList<NgbdSortableHeader>;
 
-  constructor(public service: CountryService) {
+  constructor(public service: ContactService) {
     this.countries$ = service.countries$;
     this.total$ = service.total$;
   }

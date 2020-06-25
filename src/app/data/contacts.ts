@@ -1,9 +1,9 @@
-import {Country} from './country';
+import {Contact} from './contact';
 
-export const COUNTRIES: Country[] = [
+export const CONTACTS: Contact[] = [
   {
     id: 1,
-    name: 'Russia',
+    name: 'India',
     flag: 'f/f3/Flag_of_Russia.svg',
     area: 17075200,
     population: 146989754

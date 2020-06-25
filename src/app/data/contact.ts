@@ -1,4 +1,4 @@
-export interface Country {
+export interface Contact {
     id: number;
     name: string;
     flag: string;
