@@ -16,6 +16,10 @@ import { FinalViewComponent } from './components/supplier/final-view/final-view.
 import { SupplierInformationComponent } from './components/supplier/supplier-information/supplier-information.component';
 import { DashboardContactsComponent } from './components/dashboard-contacts/dashboard-contacts.component';
 
+import { ClaimSearchComponent } from './components/contacts/claim-search/claim-search.component';
+import { VariationOrderSearchComponent } from './components/contacts/variation-order-search/variation-order-search.component';
+import { ContactSearchComponent } from './components/contacts/contact-search/contact-search.component';
+
 
 
 const routes: Routes = [
@@ -74,6 +78,18 @@ const routes: Routes = [
       {
         path: 'dashboard-contacts',    
         component: DashboardContactsComponent,
+      },
+      {
+        path: 'contact-search',    
+        component: ContactSearchComponent,
+      },
+      {
+        path: 'claim-search',    
+        component: ClaimSearchComponent,
+      },
+      {
+        path: 'variation-order-search',    
+        component: VariationOrderSearchComponent,
       }
     ]
 }

@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +27,10 @@ import { DashboardTendersComponent } from './components/dashboard-tenders/dashbo
 import { DashboardContactsComponent } from './components/dashboard-contacts/dashboard-contacts.component';
 import { ProgressBarComponent } from './components/supplier/progress-bar/progress-bar.component';
 
+import { ModelWindowComponent } from './components/model-window/model-window.component';
+import { DataTablesModule } from 'angular-datatables';
+import { ContactSearchComponent } from './components/contacts/contact-search/contact-search.component';
+import { NgbdSortableHeader } from './sortable.directive';
 
 
 @NgModule({
@@ -47,12 +53,19 @@ import { ProgressBarComponent } from './components/supplier/progress-bar/progres
     FinalViewComponent,
     DashboardTendersComponent,
     DashboardContactsComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    ModelWindowComponent,
+    ContactSearchComponent,
+    NgbdSortableHeader    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    DataTablesModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
