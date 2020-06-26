@@ -1,5 +1,5 @@
 import {Directive, EventEmitter, Input, Output} from '@angular/core';
-import { Contact } from '../data/contacts';
+import { Contact } from '../data/contact';
 
 export type SortColumn = keyof Contact | '';
 export type SortDirection = 'asc' | 'desc' | '';

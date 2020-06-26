@@ -30,7 +30,7 @@ import { ProgressBarComponent } from './components/supplier/progress-bar/progres
 import { ModelWindowComponent } from './components/model-window/model-window.component';
 import { DataTablesModule } from 'angular-datatables';
 import { ContactSearchComponent } from './components/contacts/contact-search/contact-search.component';
-import { NgbdSortableHeader } from './sortable.directive';
+import { NgbdSortableHeader } from './services/sortable.directive';
 
 
 @NgModule({
