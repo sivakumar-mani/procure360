@@ -8,12 +8,12 @@ import {ContactService} from '../../../services/contact.service';
 import {NgbdSortableHeader, SortEvent} from '../../../services/sortable.directive';
 
 @Component({
-  selector: 'app-contact-search',
-  templateUrl: './contact-search.component.html',
-  styleUrls: ['./contact-search.component.scss'],
+  selector: 'app-claim-search',
+  templateUrl: './claim-search.component.html',
+  styleUrls: ['./claim-search.component.scss'],
   providers: [ContactService, DecimalPipe]
 })
-export class ContactSearchComponent implements OnInit {
+export class ClaimSearchComponent implements OnInit {
 
   countries$: Observable<Contact[]>;
   total$: Observable<number>;
@@ -39,4 +39,5 @@ export class ContactSearchComponent implements OnInit {
     this.service.sortColumn = column;
     this.service.sortDirection = direction;
   }
+
 }

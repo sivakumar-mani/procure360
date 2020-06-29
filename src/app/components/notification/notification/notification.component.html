@@ -1,0 +1,32 @@
+<div class="container">
+    <form class="form-inline mt-5">
+
+        <div class="form-group mr-5">
+            <div class="input-group">
+                <input class="form-control" placeholder="Enter Media, press release" >
+            </div>
+        </div>
+        <div class="form-group mr-5">
+            <div class="input-group">
+                <input class="form-control" placeholder="Publish Datae" name="publish" [(ngModel)]="publish" ngbDatepicker
+                    #d1="ngbDatepicker">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary fa fa-calendar" (click)="d1.toggle()"
+                        type="button"></button>
+                </div>
+            </div>
+        </div>      
+    </form>
+    <ul class="list-group mt-4">
+        <li class="list-group-item"><a href="">07 May 2020 Test News Test</a></li>
+        <li class="list-group-item"><a href="">07 May 2020 Test News Test</a></li>
+        <li class="list-group-item"><a href="">07 May 2020 Test News Test</a></li>
+        <li class="list-group-item"><a href="">07 May 2020 Test News Test</a></li>
+        <li class="list-group-item"><a href="">07 May 2020 Test News Test</a></li>
+        <li class="list-group-item"><a href="">07 May 2020 Test News Test</a></li>
+        <li class="list-group-item"><a href="">07 May 2020 Test News Test</a></li>
+        <li class="list-group-item"><a href="">07 May 2020 Test News Test</a></li>
+        <li class="list-group-item"><a href="">07 May 2020 Test News Test</a></li>
+        <li class="list-group-item"><a href="">07 May 2020 Test News Test</a></li>
+      </ul>
+</div>

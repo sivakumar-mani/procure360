@@ -29,8 +29,16 @@ import { ProgressBarComponent } from './components/supplier/progress-bar/progres
 
 import { ModelWindowComponent } from './components/model-window/model-window.component';
 import { DataTablesModule } from 'angular-datatables';
-import { ContactSearchComponent } from './components/contacts/contact-search/contact-search.component';
 import { NgbdSortableHeader } from './services/sortable.directive';
+import { ClaimSearchComponent } from './components/contracts/claim-search/claim-search.component';
+import { ContractSearchComponent } from './components/contracts/contract-search/contract-search.component';
+import { VariationOrderSearchComponent } from './components/contracts/variation-order-search/variation-order-search.component';
+import { CompletionCertificateSearchComponent } from './components/milestone-completion/completion-certificate-search/completion-certificate-search.component';
+import { InvoiceSearchComponent } from './components/payment/invoice-search/invoice-search.component';
+import { InnerDashboardComponent } from './components/dashboard-module/inner-dashboard/inner-dashboard.component';
+import { NotificationComponent } from './components/notification/notification/notification.component';
+import { InvoiceDetailsComponent } from './components/payment/invoice-details/invoice-details.component';
+
 
 
 @NgModule({
@@ -55,8 +63,15 @@ import { NgbdSortableHeader } from './services/sortable.directive';
     DashboardContactsComponent,
     ProgressBarComponent,
     ModelWindowComponent,
-    ContactSearchComponent,
-    NgbdSortableHeader    
+    NgbdSortableHeader,
+    ClaimSearchComponent,
+    ContractSearchComponent,
+    VariationOrderSearchComponent,
+    CompletionCertificateSearchComponent,
+    InvoiceSearchComponent,
+    InnerDashboardComponent,
+    NotificationComponent,
+    InvoiceDetailsComponent    
   ],
   imports: [
     BrowserModule,

@@ -16,9 +16,14 @@ import { FinalViewComponent } from './components/supplier/final-view/final-view.
 import { SupplierInformationComponent } from './components/supplier/supplier-information/supplier-information.component';
 import { DashboardContactsComponent } from './components/dashboard-contacts/dashboard-contacts.component';
 
-import { ClaimSearchComponent } from './components/contacts/claim-search/claim-search.component';
-import { VariationOrderSearchComponent } from './components/contacts/variation-order-search/variation-order-search.component';
-import { ContactSearchComponent } from './components/contacts/contact-search/contact-search.component';
+import { ClaimSearchComponent } from './components/contracts/claim-search/claim-search.component';
+import { VariationOrderSearchComponent } from './components/contracts/variation-order-search/variation-order-search.component';
+import { ContractSearchComponent } from './components/contracts/contract-search/contract-search.component';
+import { CompletionCertificateSearchComponent } from './components/milestone-completion/completion-certificate-search/completion-certificate-search.component';
+import { InvoiceSearchComponent } from './components/payment/invoice-search/invoice-search.component';
+import { InvoiceDetailsComponent } from './components/payment/invoice-details/invoice-details.component';
+import { InnerDashboardComponent } from './components/dashboard-module/inner-dashboard/inner-dashboard.component';
+import { NotificationComponent } from './components/notification/notification/notification.component';
 
 
 
@@ -80,8 +85,8 @@ const routes: Routes = [
         component: DashboardContactsComponent,
       },
       {
-        path: 'contact-search',    
-        component: ContactSearchComponent,
+        path: 'contract-search',    
+        component: ContractSearchComponent,
       },
       {
         path: 'claim-search',    
@@ -90,6 +95,26 @@ const routes: Routes = [
       {
         path: 'variation-order-search',    
         component: VariationOrderSearchComponent,
+      },
+      {
+        path: 'milestone-completion',    
+        component: CompletionCertificateSearchComponent,
+      },
+      {
+        path: 'payment',    
+        component: InvoiceSearchComponent,
+      },
+      {
+        path: 'invoice-details',    
+        component: InvoiceDetailsComponent,
+      },
+      {
+        path: 'inner-dashboard',    
+        component: InnerDashboardComponent,
+      },
+      {
+        path: 'notification',    
+        component: NotificationComponent,
       }
     ]
 }
