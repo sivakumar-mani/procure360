@@ -24,6 +24,10 @@ import { InvoiceSearchComponent } from './components/payment/invoice-search/invo
 import { InvoiceDetailsComponent } from './components/payment/invoice-details/invoice-details.component';
 import { InnerDashboardComponent } from './components/dashboard-module/inner-dashboard/inner-dashboard.component';
 import { NotificationComponent } from './components/notification/notification/notification.component';
+import { CrudhomeComponent } from './components/crudhome/crudhome.component';
+import { ContractInformationComponent } from './components/contracts/contract-information/contract-information.component';
+
+
 
 
 
@@ -115,7 +119,17 @@ const routes: Routes = [
       {
         path: 'notification',    
         component: NotificationComponent,
+      },
+      {
+        path: 'crudhome',    
+        component: CrudhomeComponent,
+      },
+      {
+        path: 'contract-nformation',    
+        component: ContractInformationComponent,
       }
+
+      
     ]
 }
 

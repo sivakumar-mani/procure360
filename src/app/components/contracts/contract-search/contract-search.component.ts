@@ -3,8 +3,8 @@ import {DecimalPipe} from '@angular/common';
 import {Component, QueryList, ViewChildren} from '@angular/core';
 import {Observable} from 'rxjs';
 
-import {Contact} from '../../../data/contact';
-import {ContactService} from '../../../services/contact.service';
+import {Contract} from '../../../data/contract';
+import {ContactService} from '../../../services/contract.service';
 import {NgbdSortableHeader, SortEvent} from '../../../services/sortable.directive';
 
 
@@ -16,7 +16,7 @@ import {NgbdSortableHeader, SortEvent} from '../../../services/sortable.directiv
 })
 export class ContractSearchComponent implements OnInit {
 
-  countries$: Observable<Contact[]>;
+  countries$: Observable<Contract[]>;
   total$: Observable<number>;
 
   @ViewChildren(NgbdSortableHeader) headers: QueryList<NgbdSortableHeader>;

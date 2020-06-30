@@ -16,20 +16,24 @@
     <table class="table table-striped">
       <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col" sortable="name" (sort)="onSort($event)">Country</th>
-        <th scope="col" sortable="area" (sort)="onSort($event)">Area</th>
-        <th scope="col" sortable="population" (sort)="onSort($event)">Population</th>
+        <th scope="col">Contract Number</th>
+        <th scope="col" sortable="name" (sort)="onSort($event)">Contract Description</th>
+        <th scope="col" sortable="area" (sort)="onSort($event)">Revision Number</th>
+        <th scope="col" sortable="population" (sort)="onSort($event)">Contract Type</th>
+        <th scope="col" sortable="population" (sort)="onSort($event)">Agency</th>
+        <th scope="col" sortable="population" (sort)="onSort($event)">Status</th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor="let country of countries$ | async">
-        <th scope="row">{{ country.id }}</th>
+        <th scope="row"><a routerLink="/contract-nformation">{{ country.contractnumber }}</a></th>
         <td>      
-          <ngb-highlight [result]="country.name" [term]="service.searchTerm"></ngb-highlight>
+          <ngb-highlight [result]="country.description" [term]="service.searchTerm"></ngb-highlight>
         </td>
-        <td><ngb-highlight [result]="country.area | number" [term]="service.searchTerm"></ngb-highlight></td>
-        <td><ngb-highlight [result]="country.population | number" [term]="service.searchTerm"></ngb-highlight></td>
+        <td><ngb-highlight [result]="country.revisionnumber | number" [term]="service.searchTerm"></ngb-highlight></td>
+        <td><ngb-highlight [result]="country.type" [term]="service.searchTerm"></ngb-highlight></td>
+        <td><ngb-highlight [result]="country.agency" [term]="service.searchTerm"></ngb-highlight></td>
+        <td><ngb-highlight [result]="country.status" [term]="service.searchTerm"></ngb-highlight></td>
       </tr>
       </tbody>
     </table>

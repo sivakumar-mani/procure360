@@ -1,0 +1,40 @@
+{
+    "product":[
+        {  
+            "id": 1,
+            "name": "sivakuamr",
+            "description": "test",
+            "price": 100,
+            "quantity": 1000
+        },
+        {
+            "id": 2,
+            "name": "sivakuamr",
+            "description": "test",
+            "price": 100,
+            "quantity": 1000
+        },
+        {
+            "id": 3,
+            "name": "sivakuamr",
+            "description": "test",
+            "price": 100,
+            "quantity": 1000
+        },
+        {
+            "id": 4,
+            "name": "sivakuamr",
+            "description": "test",
+            "price": 100,
+            "quantity": 1000
+        },
+        {
+            "id": 5,
+            "name": "sivakuamr",
+            "description": "test",
+            "price": 100,
+            "quantity": 1000
+        }
+        
+    ]
+}

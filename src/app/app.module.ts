@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -38,6 +39,8 @@ import { InvoiceSearchComponent } from './components/payment/invoice-search/invo
 import { InnerDashboardComponent } from './components/dashboard-module/inner-dashboard/inner-dashboard.component';
 import { NotificationComponent } from './components/notification/notification/notification.component';
 import { InvoiceDetailsComponent } from './components/payment/invoice-details/invoice-details.component';
+import { ContractInformationComponent } from './components/contracts/contract-information/contract-information.component';
+
 
 
 
@@ -71,7 +74,9 @@ import { InvoiceDetailsComponent } from './components/payment/invoice-details/in
     InvoiceSearchComponent,
     InnerDashboardComponent,
     NotificationComponent,
-    InvoiceDetailsComponent    
+    InvoiceDetailsComponent,
+    ContractInformationComponent,
+     
   ],
   imports: [
     BrowserModule,
@@ -81,6 +86,7 @@ import { InvoiceDetailsComponent } from './components/payment/invoice-details/in
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
