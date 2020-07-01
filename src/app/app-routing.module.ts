@@ -24,8 +24,9 @@ import { InvoiceSearchComponent } from './components/payment/invoice-search/invo
 import { InvoiceDetailsComponent } from './components/payment/invoice-details/invoice-details.component';
 import { InnerDashboardComponent } from './components/dashboard-module/inner-dashboard/inner-dashboard.component';
 import { NotificationComponent } from './components/notification/notification/notification.component';
-import { CrudhomeComponent } from './components/crudhome/crudhome.component';
 import { ContractInformationComponent } from './components/contracts/contract-information/contract-information.component';
+import { SupplierInfoAddComponent } from './components/supplier/supplier-info-add/supplier-info-add.component';
+import { SupplierInfoEditComponent } from './components/supplier/supplier-info-edit/supplier-info-edit.component';
 
 
 
@@ -119,17 +120,19 @@ const routes: Routes = [
       {
         path: 'notification',    
         component: NotificationComponent,
-      },
-      {
-        path: 'crudhome',    
-        component: CrudhomeComponent,
-      },
+      },      
       {
         path: 'contract-nformation',    
         component: ContractInformationComponent,
-      }
-
-      
+      },
+      {
+        path: 'supplier-info-add',    
+        component: SupplierInfoAddComponent,
+      },
+      { 
+        path: 'supplier-info-edit/:applicationno', 
+      component: SupplierInfoEditComponent 
+    }         
     ]
 }
 

@@ -11,7 +11,9 @@ import { Supplier } from './Supplier';
 })
 export class SupplierService {
 
-  private apiServer = "http://localhost:5000";
+  private apiURL = "http://localhost:5000";
+
+  
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -19,49 +21,50 @@ export class SupplierService {
   }
   constructor(private httpClient: HttpClient) { }
 
+  getAll(): Observable<Supplier[]> {
+    return this.httpClient.get<Supplier[]>(this.apiURL + '/supplier/')
+    .pipe(
+      catchError(this.errorHandler)
+    )
+  }
+   
   create(Supplier): Observable<Supplier> {
-    return this.httpClient.post<Supplier>(this.apiServer + '/Suppliers/', JSON.stringify(Supplier), this.httpOptions)
+    return this.httpClient.post<Supplier>(this.apiURL + '/supplier/', JSON.stringify(Supplier), this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )
   }  
-  getById(id): Observable<Supplier> {
-    return this.httpClient.get<Supplier>(this.apiServer + '/Suppliers/' + id)
+   
+  find(applicationno): Observable<Supplier> {
+    return this.httpClient.get<Supplier>(this.apiURL + '/supplier/' + applicationno)
     .pipe(
       catchError(this.errorHandler)
     )
   }
-
-  getAll(): Observable<Supplier[]> {
-    return this.httpClient.get<Supplier[]>(this.apiServer + '/Suppliers/')
+  
+   
+  update(applicationno, Supplier): Observable<Supplier> {
+    return this.httpClient.put<Supplier>(this.apiURL + '/supplier/' + applicationno, JSON.stringify(Supplier), this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )
   }
-
-  update(id, Supplier): Observable<Supplier> {
-    return this.httpClient.put<Supplier>(this.apiServer + '/Suppliers/' + id, JSON.stringify(Supplier), this.httpOptions)
+   
+  delete(applicationno){
+    return this.httpClient.delete<Supplier>(this.apiURL + '/supplier/' + applicationno, this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )
   }
-
-  delete(id){
-    return this.httpClient.delete<Supplier>(this.apiServer + '/Suppliers/' + id, this.httpOptions)
-    .pipe(
-      catchError(this.errorHandler)
-    )
-  }
+    
+  
   errorHandler(error) {
-     let errorMessage = '';
-     if(error.error instanceof ErrorEvent) {
-       // Get client-side error
-       errorMessage = error.error.message;
-     } else {
-       // Get server-side error
-       errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
-     }
-     console.log(errorMessage);
-     return throwError(errorMessage);
-  }
+    let errorMessage = '';
+    if(error.error instanceof ErrorEvent) {
+      errorMessage = error.error.message;
+    } else {
+      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    return throwError(errorMessage);
+ }
 }

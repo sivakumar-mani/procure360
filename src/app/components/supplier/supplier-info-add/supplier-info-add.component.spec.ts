@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CrudhomeComponent } from './crudhome.component';
+import { SupplierInfoAddComponent } from './supplier-info-add.component';
 
-describe('CrudhomeComponent', () => {
-  let component: CrudhomeComponent;
-  let fixture: ComponentFixture<CrudhomeComponent>;
+describe('SupplierInfoAddComponent', () => {
+  let component: SupplierInfoAddComponent;
+  let fixture: ComponentFixture<SupplierInfoAddComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CrudhomeComponent ]
+      declarations: [ SupplierInfoAddComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CrudhomeComponent);
+    fixture = TestBed.createComponent(SupplierInfoAddComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,167 +1,6 @@
-import { Component,  OnInit} from '@angular/core';
-
-
-interface Supplier {
-  id?: number;
-  applicationno: number;
-  scopeofwork: string;
-  subcategory: string;
-  childcategory: string;
-  submiteddate: string;
-  status: string;
-
-}
-
-const SUPPLIERS: Supplier[] = [
-  {
-    applicationno: 15022525035555,
-    scopeofwork: 'scope of work',
-    subcategory: 'sub category',
-    childcategory: 'child category',
-    submiteddate: "10-052020",
-    status: 'Active'
-
-  },
-  {
-    applicationno: 15022525035555,
-    scopeofwork: 'scope of work',
-    subcategory: 'sub category',
-    childcategory: 'child category',
-    submiteddate: "10-052020",
-    status: 'Active'
-  },
-  {
-    applicationno: 15022525035555,
-    scopeofwork: 'scope of work',
-    subcategory: 'sub category',
-    childcategory: 'child category',
-    submiteddate: "10-052020",
-    status: 'Active'
-  },
-  {
-    applicationno: 15022525035555,
-    scopeofwork: 'scope of work',
-    subcategory: 'sub category',
-    childcategory: 'child category',
-    submiteddate: "10-052020",
-    status: 'Active'
-  },
-  {
-    applicationno: 15022525035555,
-    scopeofwork: 'scope of work',
-    subcategory: 'sub category',
-    childcategory: 'child category',
-    submiteddate: "10-052020",
-    status: 'Active'
-  },
-  {
-    applicationno: 15022525035555,
-    scopeofwork: 'scope of work',
-    subcategory: 'sub category',
-    childcategory: 'child category',
-    submiteddate: "10-052020",
-    status: 'Active'
-  },
-  {
-    applicationno: 15022525035555,
-    scopeofwork: 'scope of work',
-    subcategory: 'sub category',
-    childcategory: 'child category',
-    submiteddate: "10-052020",
-    status: 'Active'
-  },
-  {
-    applicationno: 15022525035555,
-    scopeofwork: 'scope of work',
-    subcategory: 'sub category',
-    childcategory: 'child category',
-    submiteddate: "10-052020",
-    status: 'Active'
-  },
-  {
-    applicationno: 15022525035555,
-    scopeofwork: 'scope of work',
-    subcategory: 'sub category',
-    childcategory: 'child category',
-    submiteddate: "10-052020",
-    status: 'Active'
-  },
-  {
-    applicationno: 15022525035555,
-    scopeofwork: 'scope of work',
-    subcategory: 'sub category',
-    childcategory: 'child category',
-    submiteddate: "10-052020",
-    status: 'Active'
-  },
-  {
-    applicationno: 15022525035555,
-    scopeofwork: 'scope of work',
-    subcategory: 'sub category',
-    childcategory: 'child category',
-    submiteddate: "10-052020",
-    status: 'Active'
-  },
-  {
-    applicationno: 15022525035555,
-    scopeofwork: 'scope of work',
-    subcategory: 'sub category',
-    childcategory: 'child category',
-    submiteddate: "10-052020",
-    status: 'Active'
-  },
-  {
-    applicationno: 15022525035555,
-    scopeofwork: 'scope of work',
-    subcategory: 'sub category',
-    childcategory: 'child category',
-    submiteddate: "10-052020",
-    status: 'Active'
-  },
-  {
-    applicationno: 15022525035555,
-    scopeofwork: 'scope of work',
-    subcategory: 'sub category',
-    childcategory: 'child category',
-    submiteddate: "10-052020",
-    status: 'Active'
-  },
-  {
-    applicationno: 15022525035555,
-    scopeofwork: 'scope of work',
-    subcategory: 'sub category',
-    childcategory: 'child category',
-    submiteddate: "10-052020",
-    status: 'Active'
-  },
-  {
-    applicationno: 15022525035555,
-    scopeofwork: 'scope of work',
-    subcategory: 'sub category',
-    childcategory: 'child category',
-    submiteddate: "10-052020",
-    status: 'Active'
-  },
-  {
-    applicationno: 15022525035555,
-    scopeofwork: 'scope of work',
-    subcategory: 'sub category',
-    childcategory: 'child category',
-    submiteddate: "10-052020",
-    status: 'Active'
-  },
- 
-  {
-    applicationno: 15022525035555,
-    scopeofwork: 'scope of work',
-    subcategory: 'sub category',
-    childcategory: 'child category',
-    submiteddate: "10-052020",
-    status: 'Active'
-  }
-];
-
-
+import { Component, OnInit } from '@angular/core';
+import { SupplierService } from '../../../services/supplier.service';
+import { Supplier } from '../../../services/Supplier';
 
 @Component({
   selector: 'app-supplier-info',
@@ -169,22 +8,34 @@ const SUPPLIERS: Supplier[] = [
   styleUrls: ['./supplier-info.component.scss']
 })
 
+
 export class SupplierInfoComponent implements OnInit {
   
- 
-  constructor() {}
+  suppliers : Supplier[] = [];
 
-  ngOnInit(): void {
-  }
-  page = 1;
-  pageSize = 5;
-  collectionSize = SUPPLIERS.length;
+  constructor(public supplierService: SupplierService) { }
 
-  get suppliers(): Supplier[] {
-    return SUPPLIERS
-      .map((supplierinfo, i) => ({id: i + 1, ...supplierinfo}))
-      .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
-  }
+  ngOnInit() {
+    this.supplierService.getAll().subscribe((data: Supplier[])=>{
+      this.suppliers = data;
+      console.log(this.suppliers);      
+    }) 
+    
+   }
+
+  //  deletePost(id){
+  //   this.supplierService.delete(id).subscribe(res => {
+  //        this.suppliers = this.suppliers.filter(item => item.applicationno !== id);
+  //        console.log('Supplier deleted successfully!');
+  //   })
+  // }
+
+  deleteSupplier(supplier: Supplier): void {
+    this.supplierService.delete(supplier.applicationno)
+      .subscribe( data => {
+        this.suppliers = this.suppliers.filter(u => u !== supplier);
+      })
+  };
 }
 
 

@@ -40,6 +40,8 @@ import { InnerDashboardComponent } from './components/dashboard-module/inner-das
 import { NotificationComponent } from './components/notification/notification/notification.component';
 import { InvoiceDetailsComponent } from './components/payment/invoice-details/invoice-details.component';
 import { ContractInformationComponent } from './components/contracts/contract-information/contract-information.component';
+import { SupplierInfoAddComponent } from './components/supplier/supplier-info-add/supplier-info-add.component';
+import { SupplierInfoEditComponent } from './components/supplier/supplier-info-edit/supplier-info-edit.component';
 
 
 
@@ -76,6 +78,8 @@ import { ContractInformationComponent } from './components/contracts/contract-in
     NotificationComponent,
     InvoiceDetailsComponent,
     ContractInformationComponent,
+    SupplierInfoAddComponent,
+    SupplierInfoEditComponent,
      
   ],
   imports: [

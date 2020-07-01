@@ -12,7 +12,8 @@
     </div>
     <!-- -----------------------button ------------------------ -->
     <div class="d-flex mb-3">
-      <button type="button" class="btn btn-primary">+ click to Add more Scope</button>
+      <button type="button" class="btn btn-primary">
+        <a routerLink="/supplier-info-add" class="ft-white">+ click to Add more Scope</a></button>
     </div>
 
     <!-- -----------------------table ------------------------ -->
@@ -21,8 +22,7 @@
 
         <table class="table table-striped">
           <thead>
-            <tr>
-              <th scope="col">S.No</th>
+            <tr>              
               <th scope="col">Application Ref#</th>
               <th scope="col">Scope of Work</th>
               <th scope="col">Sub Category</th>
@@ -33,23 +33,28 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let supplierinfo of suppliers">
-              <th scope="row">{{ supplierinfo.id }}</th>
-              <td> {{ supplierinfo.applicationno }}</td>
-              <td>{{ supplierinfo.scopeofwork }}</td>
-              <td>{{ supplierinfo.subcategory }}</td>
-              <td>{{ supplierinfo.childcategory}}</td>
-              <td>{{ supplierinfo.submiteddate}}</td>
-              <td>{{ supplierinfo.status}}</td>
-              <td><a routerLink="/supplier-information"><i class="fa fa-eye" aria-hidden="true"></i> / <i class="fa fa-pencil-square-o"
-                  aria-hidden="true"></i></a></td>
+            <tr *ngFor="let supplier of suppliers">
+           
+              <td> {{ supplier.applicationno }}</td>
+              <td>{{ supplier.scopeofwork }}</td>
+              <td>{{ supplier.subcategory }}</td>
+              <td>{{ supplier.childcategory}}</td>
+              <td>{{ supplier.submiteddate}}</td>
+              <td>{{ supplier.status}}</td>
+              <td>
+                <a href="#" [routerLink]="['/supplier/', supplier.applicationno, 'view']" class="btn btn-info mr-2"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                <a href="#" [routerLink]="['/supplier-info-edit/', supplier.applicationno]" class="btn btn-primary mr-2"><i class="fa fa-pencil-square-o"
+                  aria-hidden="true"></i></a>
+                <button type="button" (click)="deleteSupplier(supplier.applicationno)" class="btn btn-danger"><i class="fa fa-trash"
+                  aria-hidden="true"></i></button>
+            </td>
             </tr>
           </tbody>
         </table>
 
         <div class="d-flex justify-content-between p-2">
-          <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize">
-          </ngb-pagination>
+          <!-- <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize">
+          </ngb-pagination> -->
           <!-- 
         <select class="custom-select" style="width: auto" [(ngModel)]="pageSize">
           <option [ngValue]="2">2 items per page</option>
