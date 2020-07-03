@@ -27,6 +27,10 @@ import { NotificationComponent } from './components/notification/notification/no
 import { ContractInformationComponent } from './components/contracts/contract-information/contract-information.component';
 import { SupplierInfoAddComponent } from './components/supplier/supplier-info-add/supplier-info-add.component';
 import { SupplierInfoEditComponent } from './components/supplier/supplier-info-edit/supplier-info-edit.component';
+import { ContractEditComponent } from './components/contracts/contract-edit/contract-edit.component';
+import { ClaimEditComponent } from './components/contracts/claim-edit/claim-edit.component';
+import { ValidationOrderDetailsComponent } from './components/contracts/validation-order-details/validation-order-details.component';
+import { MilestoneCompletionDetailsComponent } from './components/milestone-completion/milestone-completion-details/milestone-completion-details.component';
 
 
 
@@ -131,8 +135,24 @@ const routes: Routes = [
       },
       { 
         path: 'supplier-info-edit/:applicationno', 
-      component: SupplierInfoEditComponent 
-    }         
+        component: SupplierInfoEditComponent 
+      },
+      { 
+        path: 'contract-edit', 
+        component: ContractEditComponent 
+      } ,
+      { 
+        path: 'claim-edit', 
+        component: ClaimEditComponent 
+      },
+      { 
+        path: 'validation-order-details', 
+        component: ValidationOrderDetailsComponent 
+      },
+      { 
+        path: 'milestone-completion-details', 
+        component: MilestoneCompletionDetailsComponent 
+      }           
     ]
 }
 

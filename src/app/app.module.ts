@@ -42,6 +42,10 @@ import { InvoiceDetailsComponent } from './components/payment/invoice-details/in
 import { ContractInformationComponent } from './components/contracts/contract-information/contract-information.component';
 import { SupplierInfoAddComponent } from './components/supplier/supplier-info-add/supplier-info-add.component';
 import { SupplierInfoEditComponent } from './components/supplier/supplier-info-edit/supplier-info-edit.component';
+import { ContractEditComponent } from './components/contracts/contract-edit/contract-edit.component';
+import { ClaimEditComponent } from './components/contracts/claim-edit/claim-edit.component';
+import { ValidationOrderDetailsComponent } from './components/contracts/validation-order-details/validation-order-details.component';
+import { MilestoneCompletionDetailsComponent } from './components/milestone-completion/milestone-completion-details/milestone-completion-details.component';
 
 
 
@@ -80,6 +84,10 @@ import { SupplierInfoEditComponent } from './components/supplier/supplier-info-e
     ContractInformationComponent,
     SupplierInfoAddComponent,
     SupplierInfoEditComponent,
+    ContractEditComponent,
+    ClaimEditComponent,
+    ValidationOrderDetailsComponent,
+    MilestoneCompletionDetailsComponent,
      
   ],
   imports: [

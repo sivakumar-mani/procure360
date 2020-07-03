@@ -1,7 +1,13 @@
 <div class="container">
-    <div class="df-flex pt-3">
-      <h2 class="sub-heading">Variation Order Search</h2>
-    </div>
+    <!-- --------------- breadcrumb ---------------- -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb pl-0 mt-3">
+          <li class="breadcrumb-item active" aria-current="page">Validatin Order Details</li>
+      </ol>
+  </nav>
+
+
+  <!-- ----------------- table ------------------------- -->
     <div class="d-flex table-area mt-3">
       <div class="table-responsive">
       
@@ -16,15 +22,40 @@
     <table class="table table-striped">
       <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col" sortable="name" (sort)="onSort($event)">Country</th>
-        <th scope="col" sortable="area" (sort)="onSort($event)">Area</th>
-        <th scope="col" sortable="population" (sort)="onSort($event)">Population</th>
+        <th scope="col">Validation Order Numner</th>
+        <th scope="col" sortable="name" (sort)="onSort($event)">Validation Order Description</th>
+        <th scope="col" sortable="area" (sort)="onSort($event)">Contract Number</th>
+        <th scope="col" sortable="population" (sort)="onSort($event)">Contract Description</th>
+        <th scope="col" sortable="area" (sort)="onSort($event)">Validation Order Amount</th>
+        <th scope="col" sortable="population" (sort)="onSort($event)">Status</th>
       </tr>
+      <tr>
+        <td>  <input type="text" class="form-control" id="Address" placeholder=""></td>
+        <td>  <input type="text" class="form-control" id="Address" placeholder=""></td>
+        <td>  <input type="text" class="form-control" id="Address" placeholder=""></td>
+        <td>  <input type="text" class="form-control" id="Address" placeholder=""></td>
+        <td>  <input type="text" class="form-control" id="Address" placeholder=""></td>
+        <td> 
+            <select class="form-control" id="country">
+            <option></option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select></td>
+        
+    </tr>
       </thead>
       <tbody>
       <tr *ngFor="let country of countries$ | async">
-        <th scope="row">{{ country.id }}</th>
+        <th scope="row"><a routerLink="/validation-order-details">{{ country.id }}</a></th>
+        <td>      
+          <ngb-highlight [result]="country.name" [term]="service.searchTerm"></ngb-highlight>
+        </td>
+        <td>      
+          <ngb-highlight [result]="country.name" [term]="service.searchTerm"></ngb-highlight>
+        </td>
         <td>      
           <ngb-highlight [result]="country.name" [term]="service.searchTerm"></ngb-highlight>
         </td>

@@ -3,7 +3,7 @@
     <!-- --------------- breadcrumb ---------------- -->
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb pl-0 mt-3">
-            <li class="breadcrumb-item active" aria-current="page">Invoice Details</li>
+            <li class="breadcrumb-item active" aria-current="page">Claim Details</li>
         </ol>
     </nav>
 
@@ -18,8 +18,7 @@
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse4"
                         style="text-decoration: none;"><img class="icon25"
                             src="../../../../assets/img/tender_filew.png">
-                            Invoice Details
-                        </a>
+                        Claim Details </a>
                 </h4>
             </div>
             <div id="collapse4" class="panel-collapse collapse in">
@@ -28,9 +27,9 @@
                         <table class="table text-center tendertable">
                             <tbody>
                                 <tr>
-                                    <td class="tendertable">Validatin Number <br>
+                                    <td class="tendertable">Claim Number <br>
                                         <span class="tenderextrabold">PTA/MAR/123/01</span></td>
-                                    <td class="tdborder tendertable">Validatin Status<br>
+                                    <td class="tdborder tendertable">Claim Status<br>
                                         <span class="tenderextrabold">Approved</span></td>
                                     <td class="tdborder tendertable text-left" colspan="3">Claim Total Value<br>
                                         <span class="tenderextrabold">AED 12,000,000.00</span>
@@ -40,7 +39,7 @@
                                 <tr>
                                     <td class="tendertable">Revision Number <br>
                                         <span class="tenderextrabold">1</span></td>
-                                    <td class="tdborder tendertable text-left">Validatin Description<br>
+                                    <td class="tdborder tendertable text-left">Claim Description<br>
                                         <span class="tenderextrabold">Construction of Al Garhoud Maintenance Facility,
                                             Package 2 (Building Works)</span></td>
                                     <td colspan="3" class="tdborder tendertable text-left">Contract
@@ -80,7 +79,7 @@
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1"
                         style="text-decoration: none;"><img class="icon25"
                             src="../../../../assets/img/tender_filew.png">
-                            Contract Information </a>
+                        Contract Details </a>
                 </h4>
             </div>
             <div id="collapse1" class="panel-collapse collapse in">
@@ -164,17 +163,62 @@
             </div>
         </div>
 
-  
+        <!-- 
+       -----------------------  attachment section  ------------------------------ -->
+        <div class="panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse2"
+                        style="text-decoration: none;"><img class="icon25"
+                            src="../../../../assets/img/tender_filew.png">
+                        Attachment Section
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse in">
+                <div class="panel-body panel-body1">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Document Category </th>
+                                    <th>Document Description</th>
+                                    <th>Upload Document</th>
+                                </tr>
+                            </thead>
+                            <tbody>
 
- <!-- 
-       -----------------------  Payment section  ------------------------------ -->
-
+                                <tr>
+                                    <td> <input type="text" class="form-control" id="Address" placeholder=""></td>
+                                    <td>
+                                        <select class="form-control" id="country">
+                                            <option>Sub Category</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select></td>
+                                    <td>
+                                        <div class="attach-btn file ">
+                                            <span class="btn btn-secondary">Select files here to upload</span>
+                                            <input type="file" name="file" />
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class=" panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse5"
                         style="text-decoration: none;"><img class="icon25"
-                            src="../../../../assets/img/tender_filew.png"> Completion Certificate </a> </h4>
+                            src="../../../../assets/img/tender_filew.png"> Payment
+                        Milestone / BOQ </a> </h4>
             </div>
             <div id="collapse5" class="panel-collapse collapse in">
                 <div class="panel-body panel-body1">
@@ -210,61 +254,13 @@
             </div>
         </div>
 
-        <!-- 
-       -----------------------  attachment section  ------------------------------ -->
-       <div class="panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse2"
-                    style="text-decoration: none;"><img class="icon25"
-                        src="../../../../assets/img/tender_filew.png">
-                        Attachments
-                </a>
-            </h4>
-        </div>
-        <div id="collapse2" class="panel-collapse collapse in">
-            <div class="panel-body panel-body1">
-                <div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Document Category </th>
-                                <th>Document Description</th>
-                                <th>Upload Document</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-
-                            <tr>
-                                <td> <input type="text" class="form-control" id="Address" placeholder=""></td>
-                                <td>
-                                    <select class="form-control" id="country">
-                                        <option>Sub Category</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </select></td>
-                                <td>
-                                    <div class="attach-btn file ">
-                                        <span class="btn btn-secondary">Select files here to upload</span>
-                                        <input type="file" name="file" />
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
+        <!-- Attachment section -->
 
 
 
         <div class="d-flex pull-right">
             <!-- <button type="button" class="btn btn-danger mr-2">Agree</button> -->
-            <a routerLink="/payment"><button type="button" class="btn btn-secondary">Back</button></a>
+            <a routerLink="/claim-search"><button type="button" class="btn btn-secondary">Back</button></a>
         </div>
 
 
