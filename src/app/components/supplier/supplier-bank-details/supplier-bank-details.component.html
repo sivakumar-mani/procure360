@@ -126,7 +126,13 @@
         </div>
        </div>
 
-   
+  <!-- --------------- breadcrumb ---------------- -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb pl-0 mt-0">
+      <li class="breadcrumb-item active" aria-current="page">Bank Details</li>
+    </ol>
+  </nav>
+    
 
 <!-- ---------------------- company details ------------------------------ -->
 <div class="d-flex">
@@ -139,16 +145,16 @@
             <form>
                 <div class="form-group row ">
                     <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                        <input type="text" class="form-control" id="Address" placeholder="Address / Site Name*">
+                        <input type="text" class="form-control" id="Address" placeholder="Bank Name*">
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                        <input type="text" class="form-control" id="address1" placeholder="Address line1*">
+                        <input type="text" class="form-control" id="address1" placeholder="Branch">
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                        <input type="text" class="form-control" id="address2" placeholder="Address line2">
+                        <input type="text" class="form-control" id="address2" placeholder="Currency Code *">
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                        <input type="text" class="form-control" id="pobox" placeholder="P.O.Box">
+                        <input type="text" class="form-control" id="pobox" placeholder="City *">
                     </div>
                 </div>
 
@@ -182,14 +188,17 @@
                 </div>
                 <div class="form-group row ">
                     <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                        <input type="text" class="form-control" id="phone" placeholder="Phone Number">
+                        <input type="text" class="form-control" id="phone" placeholder="Account Number">
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                        <input type="text" class="form-control" id="fax" placeholder="Fax Number">
+                        <input type="text" class="form-control" id="fax" placeholder="SWIFT CODE">
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                        <input type="text" class="form-control" id="email" placeholder="email">
+                        <input type="text" class="form-control" id="email" placeholder="Bank Refrence Identifier">
                     </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
+                      <input type="text" class="form-control" id="email" placeholder="Refrence Number">
+                  </div>
 
                 </div>
                 <div class="d-flex contact100-form-checkbox mb-2">
@@ -212,27 +221,30 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th scope="col">S.No</th>
-                <th scope="col">Application Ref#</th>
-                <th scope="col">Scope of Work</th>
-                <th scope="col">Sub Category</th>
-                <th scope="col">Child Category</th>
-                <th scope="col">Submited Date</th>
-                <th scope="col">Status</th>
+                <th scope="col">Correspondent Bank</th>
+                <th scope="col">Bank Name</th>
+                <th scope="col">Branch</th>
+                <th scope="col">Currency Code</th>
+                <th scope="col">City</th>
+                <th scope="col">Account Number</th>
+                <th scope="col">SWIFT CODE</th>
+                <th scope="col">Bank Reference Identifier</th>
+                <th scope="col">Refrence Value</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let supplierinfo of suppliers">
-                <th scope="row">{{ supplierinfo.id }}</th>
+                <th class="text-center"><input type="checkbox" name="bank" id ="name"></th>
                 <td> {{ supplierinfo.applicationno }}</td>
                 <td>{{ supplierinfo.scopeofwork }}</td>
                 <td>{{ supplierinfo.subcategory }}</td>
                 <td>{{ supplierinfo.childcategory}}</td>
+                <td>{{ supplierinfo.subcategory }}</td>
+                <td>{{ supplierinfo.subcategory }}</td>
                 <td>{{ supplierinfo.submiteddate}}</td>
                 <td>{{ supplierinfo.status}}</td>
-                <td><a routerLink="/supplier-info-edit"><i class="fa fa-eye" aria-hidden="true"></i> / <i
-                            class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+                <td><a routerLink="/supplier-info-edit"><i class="fa fa-trash" aria-hidden="true"></i> </a></td>
             </tr>
         </tbody>
     </table>

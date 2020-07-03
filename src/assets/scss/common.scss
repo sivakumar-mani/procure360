@@ -68,6 +68,11 @@ body {
   font-size: 14px;
 }
 
+.breadcrumb-item.active {
+  color: #00a1e4 !important;
+  font-size: 16px;
+  font-weight: 700;
+}
 
 /*--------------------------------------------------------------
 # Forms
@@ -449,4 +454,23 @@ section {
   line-height: 21px !important;
   vertical-align: middle;
   border-top: 1px solid #ddd;
+}
+
+.form-group.required .control-label:after { 
+  color: #d00;
+  content: "*";
+  position: absolute;
+  margin-left: 8px;
+  top:7px;
+}
+input::placeholder:after {
+  color: red;
+  content: "*";
+  opacity: 1;
+}
+
+.table-header h1 {
+  color: #00a1e4;
+  font-size: 20px;
+  font-weight: 700;
 }

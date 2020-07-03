@@ -123,7 +123,12 @@
    
         </div>
        </div>
-
+ <!-- --------------- breadcrumb ---------------- -->
+       <nav aria-label="breadcrumb">
+        <ol class="breadcrumb pl-0 mt-0">
+          <li class="breadcrumb-item active" aria-current="page">Supplier Information</li>
+        </ol>
+      </nav>
  <!-- ---------------------- company details ------------------------------ -->
 <div class="d-flex">
     <div class="form-container">
@@ -135,58 +140,35 @@
                 <form>
                     <div class="form-group row ">
                         <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="Address" placeholder="Address / Site Name*">
+                            <input type="text" class="form-control required" id="Address" placeholder="New company1 *">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="address1" placeholder="Address line1*">
+                            <input type="text" class="form-control" id="address1" placeholder="Company name in Arabic * ">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="address2" placeholder="Address line2">
+                            <input type="text" class="form-control" id="address2" placeholder="Type of Ownership *">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="pobox" placeholder="P.O.Box">
+                            <input type="text" class="form-control" id="pobox" placeholder="Supplier Type *">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="address3" placeholder="Address line3">
+                            <label>&nbsp;
+                            <input type="text" class="form-control" id="address3" placeholder="Organization website">
+                             </label>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <select class="form-control" id="country">
-                                <option>Country</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
+                            <label>Estabilishment Date
+                                <input type="date" class="form-control" id="address3" placeholder="dd-mm-yyyy">
+                        </label>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <select class="form-control" id="State">
-                                <option>Select State</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
+                            <label>&nbsp;
+                            <input type="text" class="form-control" id="city" placeholder="Parent company name">
+                        </label>
                         </div>
-                        <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="city" placeholder="City">
-                        </div>
-                    </div>
-                    <div class="form-group row ">
-                        <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="phone" placeholder="Phone Number">
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="fax" placeholder="Fax Number">
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="email" placeholder="email">
-                        </div>
-
                     </div>
                 </form>
             </div>
@@ -205,58 +187,23 @@
                 <form>
                     <div class="form-group row ">
                         <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="Address" placeholder="Address / Site Name*">
+                            <input type="text" class="form-control" id="licenceno" placeholder="2112/2">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="address1" placeholder="Address line1*">
+                            <input type="text" class="form-control" id="issuedby" placeholder="Issued by*">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="address2" placeholder="Address line2">
+                            <input type="text" class="form-control" id="issueddate" placeholder="Issued Date">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="pobox" placeholder="P.O.Box">
+                            <input type="text" class="form-control" id="location" placeholder="Location*">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="address3" placeholder="Address line3">
+                            <input type="text" class="form-control" id="expirydate" placeholder="Expiry Date">
                         </div>
-                        <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <select class="form-control" id="country">
-                                <option>Country</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <select class="form-control" id="State">
-                                <option>Select State</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="city" placeholder="City">
-                        </div>
-                    </div>
-                    <div class="form-group row ">
-                        <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="phone" placeholder="Phone Number">
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="fax" placeholder="Fax Number">
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="email" placeholder="email">
-                        </div>
-
                     </div>
                 </form>
             </div>
@@ -275,126 +222,50 @@
         <div class="d-flex">
             <div class="col-md-12 pl-5 pr-5 pb-5">
                 <form>
-                    <div class="d-flex contact100-form-checkbox mb-2">
+                    <div class="d-flex contact100-form-checkbox mb-4">
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-                            <label class="custom-control-label" for="defaultUnchecked">Manage Contacts</label>
+                            <label class="custom-control-label" for="defaultUnchecked">Primary Contact</label>
                         </div>
                     </div>
                     <div class="form-group row ">
                         <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="Address" placeholder="Address / Site Name*">
+                            <input type="text" class="form-control" id="managername" placeholder="Manager Name*">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="address1" placeholder="Address line1*">
+                            <input type="text" class="form-control" id="jobtitle" placeholder="Job Title* ">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="address2" placeholder="Address line2">
+                            <input type="text" class="form-control" id="mobile" placeholder="Mobile*">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="pobox" placeholder="P.O.Box">
+                            <input type="text" class="form-control" id="email" placeholder="e-Mail*">
                         </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="address3" placeholder="Address line3">
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <select class="form-control" id="country">
-                                <option>Country</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <select class="form-control" id="State">
-                                <option>Select State</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="city" placeholder="City">
-                        </div>
-                    </div>
-                    <div class="form-group row ">
-                        <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="phone" placeholder="Phone Number">
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="fax" placeholder="Fax Number">
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
-                            <input type="text" class="form-control" id="email" placeholder="email">
-                        </div>
-
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
-<!-- --------------------- Table area -------------------------------- -->
-
-<div class="d-flex table-area mt-5">
-    <div class="table-responsive">
-
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">S.No</th>
-                    <th scope="col">Application Ref#</th>
-                    <th scope="col">Scope of Work</th>
-                    <th scope="col">Sub Category</th>
-                    <th scope="col">Child Category</th>
-                    <th scope="col">Submited Date</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let supplierinfo of suppliers">
-                    <th scope="row">{{ supplierinfo.id }}</th>
-                    <td> {{ supplierinfo.applicationno }}</td>
-                    <td>{{ supplierinfo.scopeofwork }}</td>
-                    <td>{{ supplierinfo.subcategory }}</td>
-                    <td>{{ supplierinfo.childcategory}}</td>
-                    <td>{{ supplierinfo.submiteddate}}</td>
-                    <td>{{ supplierinfo.status}}</td>
-                    <td><a routerLink="/supplier-info-edit" data-toggle="modal" data-target="#exampleModalLong"><i class="fa fa-trash" aria-hidden="true"></i> </a></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="d-flex justify-content-between p-2">
-
-            <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize">
-            </ngb-pagination>
 
  <!-- --------------- save and navigation ---------------- -->
-            <section id="pagination" class="pagination-area mb-5">
-                <div class="container ">
-                  <div class=" pr-0 ">
-                    <nav class="navigation pull-right">
-                      <ul class="pagination ">
-                        <li class="page-item"><a class="page-link prev-btn" routerLink="/supplier-info"><img src="./assets/img/arrow-left.png"> </a></li>
+
+    <section id="pagination" class="pagination-area mt-5">
+        <div class="container">
+            <div class="d-flex">
+            <span class="mr-auto">&nbsp;</span>
+         
+                <nav class="navigation pull-right">
+                    <ul class="pagination ">
+                        <li class="page-item"><a class="page-link prev-btn" routerLink="/supplier-info"><img
+                                    src="./assets/img/arrow-left.png"> </a></li>
                         <li class="page-item"><a class="page-link save" href="#">SAVE</a></li>
-                        <li class="page-item"><a class="page-link next-btn" routerLink="/supplier-address-details"> <img src="./assets/img/arrow-right.png"> </a></li>
-                      </ul>
-                    </nav>
-                  </div>       
-                </div>
-              </section>
+                        <li class="page-item"><a class="page-link next-btn" routerLink="/supplier-address-details"> <img
+                                    src="./assets/img/arrow-right.png"> </a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-    </div>
-</div>
-<app-model-window></app-model-window>
-</div>
+    </section>
+
 

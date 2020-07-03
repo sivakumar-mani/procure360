@@ -11,7 +11,7 @@ import { Supplier } from './Supplier';
 })
 export class SupplierService {
 
-  private apiURL = "http://localhost:5000";
+  private apiURL = "http://localhost:4500";
 
   
   httpOptions = {

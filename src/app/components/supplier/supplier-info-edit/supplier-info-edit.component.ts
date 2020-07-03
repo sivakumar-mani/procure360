@@ -42,12 +42,12 @@ export class SupplierInfoEditComponent implements OnInit {
     return this.form.controls;
   }
      
-  submit(){
-    console.log(this.form.value);
-    this.supplierService.update(this.applicationno, this.form.value).subscribe(res => {
-         console.log('Supplier updated successfully!');
-         this.router.navigateByUrl('/supplier-info');
-    })
-  }
+  // c{
+  //   console.log(this.form.value);
+  //   this.supplierService.update(this.applicationno, this.form.value).subscribe(res => {
+  //        console.log('Supplier updated successfully!');
+  //        this.router.navigateByUrl('/supplier-info');
+  //   })
+  // }
 
 }

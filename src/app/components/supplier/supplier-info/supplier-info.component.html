@@ -42,11 +42,15 @@
               <td>{{ supplier.submiteddate}}</td>
               <td>{{ supplier.status}}</td>
               <td>
-                <a href="#" [routerLink]="['/supplier/', supplier.applicationno, 'view']" class="btn btn-info mr-2"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                <a href="#" routerLink="/supplier-information" class="mr-2"><i class="fa fa-eye"
+                  aria-hidden="true"></i></a> 
+                  <a href="#" routerLink="/supplier-information" class="mr-2"><i class="fa fa-pencil-square-o"
+                    aria-hidden="true"></i></a>
+                <!-- <a href="#" [routerLink]="['/supplier/', supplier.applicationno, 'view']" class="btn btn-info mr-2"><i class="fa fa-eye" aria-hidden="true"></i></a>
                 <a href="#" [routerLink]="['/supplier-info-edit/', supplier.applicationno]" class="btn btn-primary mr-2"><i class="fa fa-pencil-square-o"
                   aria-hidden="true"></i></a>
                 <button type="button" (click)="deleteSupplier(supplier.applicationno)" class="btn btn-danger"><i class="fa fa-trash"
-                  aria-hidden="true"></i></button>
+                  aria-hidden="true"></i></button> -->
             </td>
             </tr>
           </tbody>
