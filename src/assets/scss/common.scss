@@ -409,6 +409,10 @@ h1, h2, h3, h4, h5, h6 {
   color: black;
   border-radius: 0px !important;
 }
+
+.table-responsive .form-container {
+  box-shadow: none !important;
+}
 /*--------------------------------------------------------------
 # Pagination
 --------------------------------------------------------------*/
@@ -561,6 +565,14 @@ input::placeholder:after {
   border: 1px solid #494949;;
   padding: 5px 15px;
 }
+.upload-btn {
+  font-size: 12px;
+  color:#494949;
+  background: white;
+  border: 1px solid #494949;;
+  padding: 0px 15px;
+  width: 180px;
+}
 
 .add-new-btn {
   font-size: 12px;
@@ -577,3 +589,8 @@ input::placeholder:after {
   border: 1px solid #00a0e4;
   padding: 5px 15px;
 }
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: white !important;
+}
+
