@@ -25,13 +25,16 @@
 }
 
 .panel-heading .accordion-toggle:after {
-    content: "\f107";
+	content: "\2212";
+	
     font-family: FontAwesome;
     float: right;
-    color: #fff;
+	color: #000;
+	font-weight: 800;
 }
 .panel-heading .accordion-toggle.collapsed:after {
-    content: "\f106";
+	content: "\002B";
+	font-weight: 800;
 }
 .panel-title {
     margin-top: 0;
@@ -58,7 +61,7 @@
     padding: 6px !important;
     line-height: 21px !important;
     vertical-align: middle !important;
-    border: 1px solid #ddd !important;
+    // border: 1px solid #ddd !important;
     text-align: left !important;
     font-size: 12px;
 }
@@ -97,7 +100,8 @@
 	width: 40px;
 }
 
-
+tr:nth-child(even) {background: #f0f5f5}
+tr:nth-child(odd) {background: #FFF}
 
 .odd td {
 	background-color: #ebebeb;

@@ -1,13 +1,21 @@
 <div class="container">
-    <div class="df-flex pt-3">
-      <h2 class="sub-heading">Claim Search</h2>
+  <div class="df-flex pt-4">
+    <h2 class="page-title">Claim Search</h2>
+  </div>
+  <div class="d-flex m-2">
+    <div class="col-xl-12 pr-0">
+      <a routerLink="/contract-search" class="mr-2"> <button type="button" class="filter-btn pull-right ml-3">Clear All Filter</button></a>
+      <a routerLink="" class="mr-2"><button type="button" class="add-new-btn pull-right">Create New</button></a>
+     
     </div>
-    <div class="d-flex table-area mt-3">
-      <div class="table-responsive">
-      
-          <table class="table table-striped"></table>
-  <form>
-    <div class="form-group form-inline d-flex">
+  </div>
+  
+  <div class="d-flex data-table-area">
+    <div class="table-responsive">
+    
+       
+<form>
+    <!-- <div class="form-group form-inline d-flex">
       <div class="mr-auto">
         Global Search: 
         <input class="form-control ml-2" type="text" name="searchTerm" [(ngModel)]="service.searchTerm"/>
@@ -15,26 +23,26 @@
       
         <a routerLink="/contract-search" class="mr-2"><button type="button" class="btn btn-primary">Create New</button></a>
         <a routerLink="/contract-search">Clear Filter</a>
-    </div>
+    </div> -->
   
     <table class="table table-striped">
       <thead>
       <tr>
-        <th scope="col"> Claim Number#</th>
-        <th scope="col" sortable="name" (sort)="onSort($event)">Claim Description</th>
-        <th scope="col" sortable="area" (sort)="onSort($event)">Contract Numner</th>
-        <th scope="col" sortable="population" (sort)="onSort($event)">Contract Description</th>
-        <th scope="col" sortable="area" (sort)="onSort($event)">Claim Amount</th>
-        <th scope="col" sortable="population" (sort)="onSort($event)">Claim Raised Date</th>
+        <th scope="col"> Claim Number#<img class="pl-2" src="../../../../assets/img/filter-icon.png"></th>
+        <th scope="col" sortable="name" (sort)="onSort($event)">Claim Description<img class="pl-2" src="../../../../assets/img/filter-icon.png"></th>
+        <th scope="col" sortable="area" (sort)="onSort($event)">Contract Numner<img class="pl-2" src="../../../../assets/img/filter-icon.png"></th>
+        <th scope="col" sortable="population" (sort)="onSort($event)">Contract Description<img class="pl-2" src="../../../../assets/img/filter-icon.png"></th>
+        <th scope="col" sortable="area" (sort)="onSort($event)">Claim Amount<img class="pl-2" src="../../../../assets/img/filter-icon.png"></th>
+        <th scope="col" sortable="population" (sort)="onSort($event)">Claim Raised Date<img class="pl-2" src="../../../../assets/img/filter-icon.png"></th>
       </tr>
 
-      <tr>
-        <th class="pr-3"><input type="text" class="form-control" id="Address" placeholder=""></th>
-        <th class="pr-3"><input type="text" class="form-control" id="Address" placeholder=""></th>
-        <th class="pr-3"><input type="text" class="form-control" id="Address" placeholder=""></th>
-        <th class="pr-3"><input type="text" class="form-control" id="Address" placeholder=""></th>
-        <th class="pr-3"><input type="text" class="form-control" id="Address" placeholder=""></th>
-        <th class="pr-3"><input type="text" class="form-control" id="Address" placeholder=""></th>     
+      <tr class="form-container form-group">     
+        <th class="pr-3"><input type="text" class="form-control" id="Address" placeholder="Claim Number"></th>
+        <th class="pr-3"><input type="text" class="form-control" id="Address" placeholder="Claim Description"></th>
+        <th class="pr-3"><input type="text" class="form-control" id="Address" placeholder="Claim Description"></th>
+        <th class="pr-3"><input type="text" class="form-control" id="Address" placeholder="Contract Description"></th>
+        <th class="pr-3"><input type="text" class="form-control" id="Address" placeholder="Claim Amount"></th>
+        <th class="pr-3"><input type="text" class="form-control" id="Address" placeholder="Claim Raised Date"></th>     
       </tr>
       </thead>
       <tbody>
@@ -56,16 +64,19 @@
     </table>
   
     <div class="d-flex justify-content-between p-2">
-      <ngb-pagination
+      <div>
+        <span class="pr-2">Show </span>
+        <select class="custom-select" style="width: auto" name="pageSize" [(ngModel)]="service.pageSize">
+          <option [ngValue]="2">2</option>
+          <option [ngValue]="4">4</option>
+          <option [ngValue]="6">6</option>
+        </select>
+        <span class="pl-2"> records per page</span>
+      </div>
+        <ngb-pagination
         [collectionSize]="(total$ | async)!" [(page)]="service.page" [pageSize]="service.pageSize">
       </ngb-pagination>
-  
-      <select class="custom-select" style="width: auto" name="pageSize" [(ngModel)]="service.pageSize">
-        <option [ngValue]="2">2 items per page</option>
-        <option [ngValue]="4">4 items per page</option>
-        <option [ngValue]="6">6 items per page</option>
-      </select>
-    </div>
+      </div>
   
   </form>
   </div>

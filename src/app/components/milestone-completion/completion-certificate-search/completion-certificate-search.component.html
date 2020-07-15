@@ -1,48 +1,41 @@
 <div class="container">
-  <!-- --------------- breadcrumb ---------------- -->
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb pl-0 mt-3">
-        <li class="breadcrumb-item active" aria-current="page">Completion Certificate Search</li>
-    </ol>
-</nav>
-
-
-<!-- ----------------- table ------------------------- -->
-  <div class="d-flex table-area mt-3">
-    <div class="table-responsive">
-    
-        <table class="table table-striped"></table>
-<form>
-  <div class="form-group form-inline d-flex">
-    <div class="mr-auto">
-      Global Search: 
-      <input class="form-control ml-2" type="text" name="searchTerm" [(ngModel)]="service.searchTerm"/>
-    </div>
-    
-      <a routerLink="/" class="mr-2"><button type="button" class="btn btn-primary">Create New</button></a>
-      <a routerLink="/">Clear Filter</a>
+  <div class="df-flex pt-4">
+    <h2 class="page-title">Completion Certificate Search</h2>
   </div>
+  <div class="d-flex m-2">
+    <div class="col-xl-12 pr-0">
+      <a routerLink="/contract-search" class="mr-2"> <button type="button" class="filter-btn pull-right ml-3">Clear All Filter</button></a>
+      <a routerLink="" class="mr-2"><button type="button" class="add-new-btn pull-right">Create New</button></a>
+     
+    </div>
+  </div>
+  
+  <div class="d-flex data-table-area">
+    <div class="table-responsive">
+
+<form>
+
 
   <table class="table table-striped">
     <thead>
     <tr>
      
-      <th scope="col" sortable="name" (sort)="onSort($event)">Completion Certificate Number</th>
-      <th scope="col" sortable="area" (sort)="onSort($event)">Completion Certificate Description</th>
-      <th scope="col" sortable="population" (sort)="onSort($event)">Contract Number</th>
-      <th scope="col" sortable="area" (sort)="onSort($event)">Contract Description</th>
+      <th scope="col" sortable="name" (sort)="onSort($event)">Completion Certificate Number<img class="pl-2" src="../../../../assets/img/filter-icon.png"></th>
+      <th scope="col" sortable="area" (sort)="onSort($event)">Completion Certificate Description<img class="pl-2" src="../../../../assets/img/filter-icon.png"></th>
+      <th scope="col" sortable="population" (sort)="onSort($event)">Contract Number<img class="pl-2" src="../../../../assets/img/filter-icon.png"></th>
+      <th scope="col" sortable="area" (sort)="onSort($event)">Contract Description<img class="pl-2" src="../../../../assets/img/filter-icon.png"></th>
       <th scope="col">Revision Number</th>
-      <th scope="col" sortable="population" (sort)="onSort($event)">Status</th>
+      <th scope="col" sortable="population" (sort)="onSort($event)">Status<img class="pl-2" src="../../../../assets/img/filter-icon.png"></th>
     </tr>
-    <tr>
-      <td>  <input type="text" class="form-control" id="Address" placeholder=""></td>
-      <td>  <input type="text" class="form-control" id="Address" placeholder=""></td>
-      <td>  <input type="text" class="form-control" id="Address" placeholder=""></td>
-      <td>  <input type="text" class="form-control" id="Address" placeholder=""></td>
-      <td>  <input type="text" class="form-control" id="Address" placeholder=""></td>
+    <tr class="form-container form-group">    
+      <td>  <input type="text" class="form-control" id="Address" placeholder="Completion Certificate Number"></td>
+      <td>  <input type="text" class="form-control" id="Address" placeholder="Completion Certificate Description"></td>
+      <td>  <input type="text" class="form-control" id="Address" placeholder="Contract Number"></td>
+      <td>  <input type="text" class="form-control" id="Address" placeholder="Contract Description"></td>
+      <td>  <input type="text" class="form-control" id="Address" placeholder="Revision Number"></td>
       <td> 
           <select class="form-control" id="country">
-          <option></option>
+          <option>Status</option>
           <option>1</option>
           <option>2</option>
           <option>3</option>
@@ -70,17 +63,20 @@
     </tbody>
   </table>
 
+  
   <div class="d-flex justify-content-between p-2">
-    <ngb-pagination
+    <div>
+      <span class="pr-2">Show </span>
+      <select class="custom-select" style="width: auto" name="pageSize" [(ngModel)]="service.pageSize">
+        <option [ngValue]="2">2</option>
+        <option [ngValue]="4">4</option>
+        <option [ngValue]="6">6</option>
+      </select>
+      <span class="pl-2"> records per page</span>
+    </div>
+      <ngb-pagination
       [collectionSize]="(total$ | async)!" [(page)]="service.page" [pageSize]="service.pageSize">
     </ngb-pagination>
-
-    <select class="custom-select" style="width: auto" name="pageSize" [(ngModel)]="service.pageSize">
-      <option [ngValue]="2">2 items per page</option>
-      <option [ngValue]="4">4 items per page</option>
-      <option [ngValue]="6">6 items per page</option>
-    </select>
-  </div>
-
+    </div>
 </form>
 </div>

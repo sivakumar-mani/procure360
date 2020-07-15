@@ -20,6 +20,12 @@ body {
   color:#444346;
   font-size: 600;
 }
+
+.page-title {
+  font-size: 18px;
+  color:#00a1e4;
+  font-size: 900;
+}
 .content {
   min-height: calc(100vh - 170px);
  height: 100%;
@@ -140,6 +146,10 @@ body {
 
 .pagination-area .next-btn:hover, .pagination-area .prev-btn:hover  {
   background: #007bff;
+}
+
+.page-item.active .page-link {
+  background-color: #19bd9d !important;
 }
 
 
@@ -345,6 +355,61 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
+# Data Table
+--------------------------------------------------------------*/
+
+.data-table-area {
+  font-size: 12px;
+}
+
+.data-table-area .table thead th {
+  color: #000000;
+  border-top: 1px solid #19bd9d;
+  border-bottom: 1px solid #19bd9d;
+  /* min-width:150px; */
+  background: white;
+  padding: 10px 5px;
+}
+.data-table-area .table thead th:last-child {
+ min-width: 75px;
+}
+
+.data-table-area .table thead td {  
+  min-width:100px;
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.data-table-area .table-striped tbody tr:nth-of-type(odd) {
+ 
+  background-color: #ffffff;
+}
+
+.data-table-area .table-striped tbody tr:nth-of-type(even) {
+  // background-color: #ffffff;
+  background-color: #eff4f3;
+}
+
+
+.data-table-area .form-container th {
+  color: #000000;
+  border-top: 1px solid #19bd9d;
+  border-bottom: 1px solid #19bd9d;
+  /* min-width:150px; */
+  background: #d1f2eb !important;
+  padding: 0px 5px;
+}
+
+.data-table-area .form-container input, 
+.data-table-area .form-container select  {
+  background: transparent;
+  border-bottom: 1px solid #000000;
+  color: black;
+  border-radius: 0px !important;
+}
+/*--------------------------------------------------------------
 # Pagination
 --------------------------------------------------------------*/
 
@@ -421,6 +486,18 @@ section {
 
 // -------------------------------   toggle -------------
 
+.panel-default > .panel-heading {
+  background-color: #baebe1 !important;  
+  padding-left: 5px;
+  border-radius: 0px;
+}
+
+.panel-default > .panel-heading a {
+  color: #333333 !important;
+  font-weight: 600;
+  font-size: 14px;
+}
+
 .accordion .card-header:after {
   font-family: 'FontAwesome';  
   content: "\f068";
@@ -473,4 +550,30 @@ input::placeholder:after {
   color: #00a1e4;
   font-size: 20px;
   font-weight: 700;
+}
+
+// -------------------------------   button -------------
+
+.filter-btn {
+  font-size: 12px;
+  color:#494949;
+  background: white;
+  border: 1px solid #494949;;
+  padding: 5px 15px;
+}
+
+.add-new-btn {
+  font-size: 12px;
+  color:white;
+  background: #00a0e4;
+  border: 1px solid #00a0e4;
+  padding: 5px 15px;
+}
+
+.view-btn {
+  font-size: 12px;
+  color:white;
+  background: #00a0e4;
+  border: 1px solid #00a0e4;
+  padding: 5px 15px;
 }
